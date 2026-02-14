@@ -23,7 +23,6 @@ app.use("/api/users", userRouter);
 app.use("/api/posts", jwtMiddleware, postRoputer);
 app.use("/api/likes", jwtMiddleware, likeRouter);
 app.use("/api/comments", jwtMiddleware, commentRouter);
-app.use("/api/otp", jwtMiddleware, otpRouter);
 app.use("/api/friends", jwtMiddleware, friendRouter);
 
 app.use((req, res, next) => {
