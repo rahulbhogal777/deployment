@@ -1,14 +1,13 @@
-import "./env.js";
-import express from "express";
 import cookieParser from "cookie-parser";
-import userRouter from "./src/features/user/user.routes.js";
-import postRoputer from "./src/features/posts/post.routes.js";
-import jwtMiddleware from "./src/middlewares/jwtAuth.js";
-import likeRouter from "./src/features/like/like.routes.js";
+import express from "express";
+import "./env.js";
+import { ApplicationError, errorHandler } from "./src/errorHanding/error.handing.js";
 import commentRouter from "./src/features/comment/comment.routes.js";
 import friendRouter from "./src/features/friends/friend.routes.js";
-import { errorHandler, ApplicationError } from "./src/errorHanding/error.handing.js";
-import otpRouter from "./src/features/OTP/otp.routes.js";
+import likeRouter from "./src/features/like/like.routes.js";
+import postRoputer from "./src/features/posts/post.routes.js";
+import userRouter from "./src/features/user/user.routes.js";
+import jwtMiddleware from "./src/middlewares/jwtAuth.js";
 
 const app = express();
 
